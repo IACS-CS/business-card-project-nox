@@ -1,3 +1,67 @@
+/* Code inserted by COPILOT based on prompt: Make the .logo image a circle */
+.card-2 .logo {
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* Code inserted by COPILOT based on prompt: Set card-2 background color to yellow */
+.card-2 {
+  background-color: yellow;
+}
+/* Code inserted by COPILOT based on prompt: Flexbox layout for card-2, left/right 50/50, right side top/bottom, left side logo/nickname at top */
+
+.card-2 .card-front {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.card-2 .left,
+.card-2 .right {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-2 .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1em;
+}
+
+.card-2 .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.card-2 .logo {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5em;
+}
+
+.card-2 .nickname {
+  font-weight: bold;
+}
 /* Style for card-2 (your flexbox example) */
 .card-2 {
+}
+
+/* Code inserted by COPILOT based on prompt: Add vertical center line to card-2 */
+.card-2 .card-front {
+  position: relative;
+}
+.card-2 .card-front::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: black;
+  transform: translateX(-1px);
+  z-index: 1;
 }
